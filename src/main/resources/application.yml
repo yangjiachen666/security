@@ -1,0 +1,28 @@
+server:
+  port: 22222
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/security?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    # ��Դ��Ϣ
+  messages:
+    # ���ʻ���Դ�ļ�·��
+    basename: i18n/messages
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  session:
+    store-type: redis
+
+# knife4j����
+knife4j:
+  enable: true
+  basic:
+    enable: true
+    username: admin
+    password: admin
+mybatis-plus:
+  type-aliases-package: com.xyx.entity
+  mapper-locations: classpath:mybatis/*/*.xml
